@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  housing-price-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: housing-price-api
+
+    ports:
+      - "8000:8000"
+
+    restart: unless-stopped
+
+    environment:
+      - PYTHONUNBUFFERED=1
+
+    healthcheck:
+      test: ["CMD", "python", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
