@@ -1,0 +1,11 @@
+FEATURE_COLUMNS = [
+    "square_footage",
+    "bedrooms",
+    "bathrooms",
+    "year_built",
+    "lot_size",
+    "distance_to_city_center",
+    "school_rating"
+]
+
+EXPECTED_FEATURES = len(FEATURE_COLUMNS)
